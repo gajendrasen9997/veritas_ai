@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f7f9fb;
+    color: #191c1e;
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+
+  /* Stitch custom font-size utilities not covered by Tailwind config */
+  .text-display-lg {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .text-headline-lg {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+  .text-headline-lg-mobile {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  .text-reading-body {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+  }
+  .text-ui-body {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .text-label-caps {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .text-data-mono {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  /* Signal highlight classes matching Stitch design */
+  .signal-yellow {
+    background-color: rgba(249, 226, 135, 0.35);
+    border-bottom: 2px solid #dcc66e;
+    color: #191c1e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .signal-yellow:hover {
+    background-color: rgba(249, 226, 135, 0.6);
+  }
+
+  .signal-orange {
+    background-color: rgba(255, 220, 197, 0.45);
+    border-bottom: 2px solid #ffb783;
+    color: #191c1e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .signal-orange:hover {
+    background-color: rgba(255, 220, 197, 0.7);
+  }
+
+  .signal-red {
+    background-color: rgba(255, 218, 214, 0.55);
+    border-bottom: 2px solid #ba1a1a;
+    color: #191c1e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .signal-red:hover {
+    background-color: rgba(255, 218, 214, 0.8);
+  }
+
+  .signal-none {
+    color: #191c1e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .signal-none:hover {
+    background-color: rgba(216, 226, 255, 0.25);
+  }
+
+  .signal-active {
+    outline: 2px solid #031635;
+    outline-offset: 1px;
+    background-color: rgba(216, 226, 255, 0.75) !important;
+    font-weight: 500;
+  }
+}
+
+/* Focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid #031635;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbars for essay editor & evidence panel */
+textarea::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+textarea::-webkit-scrollbar-track {
+  background: #f7f9fb;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: #e0e3e5;
+  border-radius: 4px;
+}
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #c5c6cf;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #c5c6cf;
+  border-radius: 4px;
+}
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #75777f;
+}
